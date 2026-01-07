@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Font Override</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🔤 Font Override</h1>
+      <label class="toggle-switch">
+        <input type="checkbox" id="enabled" checked>
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <main class="settings">
+      <div class="setting-group">
+        <label for="normalFont" class="setting-label">
+          <span class="icon">📝</span>
+          通常テキスト
+        </label>
+        <input 
+          type="text" 
+          id="normalFont" 
+          class="font-input" 
+          placeholder="Noto Sans JP"
+          spellcheck="false"
+        >
+      </div>
+
+      <div class="setting-group">
+        <label for="codeFont" class="setting-label">
+          <span class="icon">💻</span>
+          コードブロック
+        </label>
+        <input 
+          type="text" 
+          id="codeFont" 
+          class="font-input" 
+          placeholder="Cascade Mono"
+          spellcheck="false"
+        >
+      </div>
+
+      <div class="setting-group">
+        <label for="mathFont" class="setting-label">
+          <span class="icon">📐</span>
+          数式
+        </label>
+        <input 
+          type="text" 
+          id="mathFont" 
+          class="font-input" 
+          placeholder="Cambria Math"
+          spellcheck="false"
+        >
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button id="saveBtn" class="save-btn">
+        💾 保存して適用
+      </button>
+      <p id="status" class="status"></p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
